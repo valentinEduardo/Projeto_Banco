@@ -38,4 +38,7 @@ public class Titular4 extends TitularMaster {
         
 
     }
+     public void setDepositoIndivi4(Integer valorD) {
+        super.setDepositoIndivi(valorD);
+     }
 }
