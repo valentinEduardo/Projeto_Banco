@@ -35,7 +35,8 @@ public class Titular2 extends TitularMaster{
 
     public void setSaque2(Banco bank,Integer valorSaque,Integer tipoNota[],int quant[]){
         super.setSaque(bank, valorSaque, tipoNota, quant);
-        
-
     }
+     public void setDepositoIndivi2(Integer valorD) {
+        super.setDepositoIndivi(valorD);
+     }
 }
