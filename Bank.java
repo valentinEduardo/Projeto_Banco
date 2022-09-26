@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.ArrayList;
 public class Banco {
     private Integer saldoBancoTotal; 
     private Integer nota2= 20;
@@ -34,45 +35,49 @@ public class Banco {
     public Integer getSaldoBancoTotal() {
         return saldoBancoTotal;
     } 
+    public void setSaldoBancoTotal(Integer valor) {
+        saldoBancoTotal += valor;
+    } 
 
     //Metodo Get Para que cada vez que ouver um saque do titular ele retirar o valor do banco de acordo com as notas
-    public void setSaldoBancoTotalSaque(Integer saque,Integer tipoNtota[],int quant[]) {
-        int p=0;        
-        int d=0; 
-        int i=0;        
-        for(d=0;d<4;d++){ 
-            p=quant[d];
-            for(i=0;i<p;i++){
-                if(tipoNtota[d]== 2 && saque > 0 && this.nota2 > 0 && this.nota2 <21){
-                    this.nota2 -=1;
-                    this.saldoBancoTotal-=2;
-                    quantNotas[0]+=1;
-                    saque-=2;
-                    acumula+=2;
-                }else if(tipoNtota[d] == 10 &&saque > 0 &&  this.nota10 > 0 && this.nota10 <21){
-                    this.nota10 -=1;
-                    this.saldoBancoTotal-=10;
-                    saque-=10;
-                    quantNotas[1]+=1;
-                    acumula+=10;
-                }else if(tipoNtota[d] == 20 &&saque > 0 &&  this.nota20 > 0 && this.nota20 <21){
+    public void setSaldoBancoTotalSaque(Integer saque) { 
+        for (int f =0;f< saque/2;f++){
+            if(saque > 0 && saque >=50 &&  this.nota50 > 0 && this.nota50 <21){
+                    this.nota50 -=1;
+                    this.saldoBancoTotal-=50;
+                    saque-=50;
+                    quantNotas[3]+=1;
+                    acumula+=50;
+            }
+            }
+            for (int f =0;f< saque/2;f++){
+            if(saque > 0 && saque >=20 &&  this.nota20 > 0 && this.nota20 <21){
+                    
                     this.nota20 -=1;
                     this.saldoBancoTotal-=20;
                     saque-=20;
                     quantNotas[2]+=1;
                     acumula+=20;
-                }else if(tipoNtota[d] == 50 &&saque > 0 &&  this.nota50 > 0 && this.nota50 <21){
-                    this.nota50 -=1;
-                    this.saldoBancoTotal-=50;
-                    saque-=20;
-                    quantNotas[3]+=1;
-                    acumula+=50;
+            }  
                 }
-               
-            }
-            
-        }       
-
+                for (int f =0;f< saque/2;f++){
+                if(saque > 0 && saque >=10 &&  this.nota10 > 0 && this.nota10 <21){
+                    this.nota10 -=1;
+                    this.saldoBancoTotal-=10;
+                    saque-=10;
+                    quantNotas[1]+=1;
+                    acumula+=10;
+                }
+                }
+                for (int f =0;f< saque/2;f++){
+                 if( saque > 0 && saque >=2  && this.nota2 > 0 && this.nota2 <21){
+                    this.nota2 -=1;
+                    this.saldoBancoTotal-=2;
+                    quantNotas[0]+=1;
+                    saque-=2;
+                    acumula+=2;
+                }
+                }
                 if(this.nota2 == 0){
                     System.out.println("Nota de R$ 2,00 Acabou!");
                 }
@@ -87,6 +92,9 @@ public class Banco {
                 }
     }//Fim do Função SaqueSaldoBanco
 
+public void setDepositoDeNotas() {
 
+    
+}
 
 }
