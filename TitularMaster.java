@@ -40,17 +40,20 @@ abstract class TitularMaster {
         return quantidadeSaque;
     }
 
-    public void setSaque(Banco bank,Integer valorSaque,Integer tipoNota[],int quant[]){
+   public void setSaque(Banco bank,Integer valorSaque){
         if(valorSaque%2 == 0 ){
-        bank.setSaldoBancoTotalSaque(valorSaque,tipoNota,quant);
-        this.saldo+=valorSaque;
+        bank.setSaldoBancoTotalSaque(valorSaque);
+        System.out.println("\r\nSaque feito con Sucesso!\r\n");
         }else {
             System.out.println("Ocorreu um Erro! Valor Solicitado e Impar!");
             System.out.println("\r\nPor favor, Insira um Valor Par!!");
-        }
-        //if(bank.getAcumula() != valorSaque)
-        
+        }       
 
+    }
+   
+    public void setDepositoIndivi(Integer valorD) {
+        this.saldo += valorD;
+        System.out.println("\r\nValor Depositado Com Sucesso!\r\n");
     }
    
 
