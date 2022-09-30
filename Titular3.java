@@ -1,44 +1,44 @@
-public class Titular4 extends TitularMaster {
+public class Titular3 extends TitularMaster{
 
-    public Titular4() {
-        super(6428, "444444444",113352);
-        setSaldo4(2000);
+    public Titular3() {
+        super(7854,"333333333",32510);
+        setSaldo3(2000);
     }
-    public Integer getCodTitular4() {
+    public Integer getCodTitular3() {
         return super.getCodTitular();
     }
     //public void setCodTitular() {
        // super.setCodTitular();
     //}
-    public String getCpfLogin4() {
+    public String getCpfLogin3() {
         return super.getCpfLogin();
     }
-    public void setCpfLogin4(String novoLogin) {
+    public void setCpfLogin3(String novoLogin) {
       super.setCpfLogin(novoLogin);
     }
-    public Integer getSenha4() {
+    public Integer getSenha3() {
         return super.getSenha();
     }
-    public void setSenha4(Integer novaSenha) {
+    public void setSenha3(Integer novaSenha) {
         super.setSenha(novaSenha);
     }
-    public Integer getSaldo4() {
+    public Integer getSaldo3() {
         return super.getSaldo();
     }
-    public void setSaldo4(Integer saldo) {
+    public void setSaldo3(Integer saldo) {
         super.setSaldo(saldo);
     }
 
-    public Integer getQuantidadeSaque4() {
+    public Integer getQuantidadeSaque3() {
         return super.getQuantidadeSaque();
     }
 
-    public void setSaque4(Banco bank,Integer valorSaque){
+    public void setSaque3(Banco bank,Integer valorSaque){
         super.setSaque(bank, valorSaque);
-        
-
+       
     }
-     public void setDepositoIndivi4(Integer valorD) {
+     public void setDepositoIndivi3(Integer valorD) {
         super.setDepositoIndivi(valorD);
      }
+    
 }
