@@ -1,22 +1,22 @@
 public class ADM {
     private Integer codAdm;
-    private Integer LoginCpf;
+    private String LoginCpf;
     private Integer senhaAdm;
 
     public ADM() {
         this.codAdm = 9997;
-        this.LoginCpf = 1001001;
-        this.senhaAdm = 642835;
+        this.LoginCpf = "1001001";
+        this.senhaAdm = 456789;
     }
 
     public Integer getCodAdm() {
         return codAdm;
     }
     
-    public Integer getLoginCpf() {
+    public String getLoginCpf() {
         return LoginCpf;
     }
-    public void setLoginCpf(Integer loginCpf) {
+    public void setLoginCpf(String loginCpf) {
         LoginCpf = loginCpf;
     }
     public Integer getSenhaAdm() {
@@ -25,6 +25,7 @@ public class ADM {
     public void setSenhaAdm(Integer senhaAdm) {
         this.senhaAdm = senhaAdm;
     }
-    
+
+  
 
 }
