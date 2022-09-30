@@ -1,7 +1,7 @@
 public class Titular4 extends TitularMaster {
 
     public Titular4() {
-        super(6428, 444444444,113352);
+        super(6428, "444444444",113352);
         setSaldo4(2000);
     }
     public Integer getCodTitular4() {
@@ -10,10 +10,10 @@ public class Titular4 extends TitularMaster {
     //public void setCodTitular() {
        // super.setCodTitular();
     //}
-    public Integer getCpfLogin4() {
+    public String getCpfLogin4() {
         return super.getCpfLogin();
     }
-    public void setCpfLogin4(Integer novoLogin) {
+    public void setCpfLogin4(String novoLogin) {
       super.setCpfLogin(novoLogin);
     }
     public Integer getSenha4() {
@@ -33,8 +33,8 @@ public class Titular4 extends TitularMaster {
         return super.getQuantidadeSaque();
     }
 
-    public void setSaque4(Banco bank,Integer valorSaque,Integer tipoNota[],int quant[]){
-        super.setSaque(bank, valorSaque, tipoNota, quant);
+    public void setSaque4(Banco bank,Integer valorSaque){
+        super.setSaque(bank, valorSaque);
         
 
     }
