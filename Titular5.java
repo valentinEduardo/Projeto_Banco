@@ -1,7 +1,7 @@
 public class Titular5 extends TitularMaster{
 
     public Titular5() {
-        super(5451,555555555,581393);
+        super(5451,"555555555",581393);
         setSaldo5(2000);
     }
     public Integer getCodTitular5() {
@@ -10,10 +10,10 @@ public class Titular5 extends TitularMaster{
     //public void setCodTitular() {
        // super.setCodTitular();
     //}
-    public Integer getCpfLogin5() {
+    public String getCpfLogin5() {
         return super.getCpfLogin();
     }
-    public void setCpfLogin5(Integer novoLogin) {
+    public void setCpfLogin5(String novoLogin) {
       super.setCpfLogin(novoLogin);
     }
     public Integer getSenha5() {
@@ -33,8 +33,8 @@ public class Titular5 extends TitularMaster{
         return super.getQuantidadeSaque();
     }
 
-    public void setSaque5(Banco bank,Integer valorSaque,Integer tipoNota[],int quant[]){
-        super.setSaque(bank, valorSaque, tipoNota, quant);
+    public void setSaque5(Banco bank,Integer valorSaque){
+        super.setSaque(bank, valorSaque);
         
 
     }
