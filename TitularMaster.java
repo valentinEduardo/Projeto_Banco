@@ -1,10 +1,10 @@
 abstract class TitularMaster {
     private Integer codTitular;
-    private  Integer cpfLogin;
+    private  String cpfLogin;
     private Integer senha;
     private Integer saldo;
     private Integer quantidadeSaque;
-    public TitularMaster(Integer cod,Integer cpfLogin,Integer senha) {
+    public TitularMaster(Integer cod,String cpfLogin,Integer senha) {
         this.codTitular = cod;
         this.cpfLogin = cpfLogin;
         this.senha = senha;
@@ -17,10 +17,10 @@ abstract class TitularMaster {
     public void setCodTitular(int codTitular) {
         this.codTitular = codTitular;
     }
-    public Integer getCpfLogin() {
+    public String getCpfLogin() {
         return this.cpfLogin;
     }
-    public void setCpfLogin(Integer cpfLogin) {
+    public void setCpfLogin(String cpfLogin) {
         this.cpfLogin = cpfLogin;
     }
     public Integer getSenha() {
@@ -42,7 +42,9 @@ abstract class TitularMaster {
 
    public void setSaque(Banco bank,Integer valorSaque){
         if(valorSaque%2 == 0 ){
+           System.out.println("\r\nSaldo do Banco Antes:"+bank.getSaldoBancoTotal());
         bank.setSaldoBancoTotalSaque(valorSaque);
+           System.out.println("\r\nSaldo do Banco:"+bank.getSaldoBancoTotal());
         System.out.println("\r\nSaque feito con Sucesso!\r\n");
         }else {
             System.out.println("Ocorreu um Erro! Valor Solicitado e Impar!");
