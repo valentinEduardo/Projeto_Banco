@@ -62,7 +62,7 @@ public class Main {
 
           do {
             System.out.println("Operações Disponives");
-            System.out.println("|1-Deposito|\r\n|2-Saldo   |\r\n|0-Sair    |");
+            System.out.println("|1-Repor Notas|\r\n|2-Saldo   |\r\n|0-Sair    |");
 
             opcao = scn.nextInt();
 
@@ -100,6 +100,11 @@ public class Main {
 
               case 2:
                 System.out.println("O valor do caixa do banco é " + Bank.getSaldoBancoTotal());
+                System.out.println("Esses são os valores das notas:");
+                System.out.println("Notas de 2:  " + Bank.getNota2());
+                System.out.println("Notas de 10: " + Bank.getNota10());
+                System.out.println("Notas de 20: " + Bank.getNota20());
+                System.out.println("Notas de 50: " + Bank.getNota50());
 
                 break;
 
@@ -169,7 +174,7 @@ public class Main {
               int tOpera2 = 0;
               do {
                 System.out.println("Operações Disponives");
-                System.out.println("|1-Saque   |\r\n|2-Deposito|\r\n|3-Saldo   |\r\n");
+                System.out.println("|1-Saque   |\r\n|2-Deposito|\r\n|3-Saldo   |\r\n|0-Sair    |");
                 tOpera2 = scn.nextInt();
                 if (tOpera2 == 1) {
                   System.out.println("Operação 1 escolhida!\r\n");
@@ -192,7 +197,7 @@ public class Main {
               int tOpera3 = 0;
               do {
                 System.out.println("Operações Disponives");
-                System.out.println("|1-Saque   |\r\n|2-Deposito|\r\n|3-Saldo   |\r\n");
+                System.out.println("|1-Saque   |\r\n|2-Deposito|\r\n|3-Saldo   |\r\n|0-Sair    |");
                 tOpera3 = scn.nextInt();
                 if (tOpera3 == 1) {
                   System.out.println("Operação 1 escolhida!\r\n");
@@ -215,7 +220,7 @@ public class Main {
               int tOpera4 = 0;
               do {
                 System.out.println("Operações Disponives");
-                System.out.println("|1-Saque   |\r\n|2-Deposito|\r\n|3-Saldo   |\r\n");
+                System.out.println("|1-Saque   |\r\n|2-Deposito|\r\n|3-Saldo   |\r\n|0-Sair    |");
                 tOpera4 = scn.nextInt();
                 if (tOpera4 == 1) {
                   System.out.println("Operação 1 escolhida!\r\n");
@@ -238,7 +243,7 @@ public class Main {
               int tOpera5 = 0;
               do {
                 System.out.println("Operações Disponives");
-                System.out.println("|1-Saque   |\r\n|2-Deposito|\r\n|3-Saldo   |\r\n");
+                System.out.println("|1-Saque   |\r\n|2-Deposito|\r\n|3-Saldo   |\r\n|0-Sair    |");
                 tOpera5 = scn.nextInt();
                 if (tOpera5 == 1) {
                   System.out.println("Operação 1 escolhida!\r\n");
