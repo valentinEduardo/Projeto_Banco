@@ -77,7 +77,6 @@ public class Banco {
         acumula += 10;
       }
     }
-    System.out.println("valor saque" + saque);
     for (int p = 0; p <= 20; p++) {
       if (saque > 0 && saque >= 2 && this.nota2 > 0 && this.nota2 < 21) {
         this.nota2 -= 1;
@@ -93,7 +92,6 @@ public class Banco {
     }
     if (this.nota10 == 0) {
       System.out.println("Nota de R$ 10,00 Acabou!");
-      System.out.println("quantidade 2: " + this.nota2);
     }
     if (this.nota20 == 0) {
       System.out.println("Nota de R$ 20,00 Acabou!");
