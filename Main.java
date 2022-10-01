@@ -43,7 +43,7 @@ public class Main {
         case 1:
           String cpfA = "";
           int senhaA = 0;
-          while (confA != 1) {
+          do {
             System.out.println(" ___________________________________");
             System.out.println("|              LOGIN ADM           |");
             System.out.println(" ----------------------------------- ");
@@ -58,9 +58,9 @@ public class Main {
             } else if (Login.indexOf(cpfA) == 5 && Senha.indexOf(senhaA) == 5) {
               confA = 1;
             }
-          }
+          } while (confA != 1);
 
-          do {
+          while (opcao != 0) {
             System.out.println("Operações Disponives");
             System.out.println("|1-Repor Notas|\r\n|2-Saldo   |\r\n|0-Sair    |");
 
@@ -108,14 +108,16 @@ public class Main {
 
                 break;
 
+              case 0:
+                op = -1;
             }
-          } while (opcao != 0);
+          }
           break;
 
         case 2:
 
           int indiceT = -1;
-          while (confT != 1) {
+          do {
             System.out.println("___________________________________");
             System.out.println("|             LOGIN TITULAR        |");
             System.out.println("----------------------------------- ");
@@ -140,7 +142,7 @@ public class Main {
               indiceT = 3;
               confT = 1;
             }
-          }
+          } while (confT != 1);
 
           switch (indiceT) {
             case 0:
