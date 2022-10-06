@@ -48,13 +48,19 @@ abstract class TitularMaster {
   }
 
   public void setSaque(Banco bank, Integer valorSaque) {
-    if (valorSaque % 2 == 0) {
+    if( bank.getSaldoBancoTotal()>0){
+       if (valorSaque % 2 == 0) {
       bank.setSaldoBancoTotalSaque(valorSaque);
       System.out.println("\r\nSaque feito con Sucesso!\r\n");
-    } else {
+    } else{
       System.out.println("Ocorreu um Erro! Valor Solicitado e Impar!");
       System.out.println("\r\nPor favor, Insira um Valor Par!!");
     }
+    }else{
+      System.out.println("\r\nSem saldo no banco para realização de saque");
+    }
+    
+   
 
   }
 
